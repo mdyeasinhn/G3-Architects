@@ -12,11 +12,21 @@
     color: #FFF;
     font-size: 1.25rem;
     font-weight: 600;
-    border:0;
+    border: 0;
     border-radius: 8px;
     background: #FF900E;
     padding: 20px 25px;
     cursor: pointer;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #131313;
+}
+
+.text-color-gray {
+    color: #727272;
 }
 
 /* header style start */
@@ -31,11 +41,7 @@ nav {
     align-items: center;
 }
 
-.nav-title {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #131313;
-}
+
 
 nav>ul {
     display: flex;
@@ -68,32 +74,124 @@ nav li a {
     font-weight: 700;
 }
 
-.banner-descrption {
-    color: #727272;
-    font-size: 1rem;
-}
-.banner img{
+.banner img {
     width: 100%;
-    margin-top:20px ;
-    
+    margin-top: 20px;
+
 }
 
+
+
+/* main section css start */
+main {
+    max-width: 1440px;
+    margin: 70px auto;
+}
+
+/* Team section css start */
+.team-container {
+    display: flex;
+    align-items: center;
+}
+
+.team-img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.team-content {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.team-title {
+    font-size: 2.8rem;
+}
+
+.team-title {
+    font-weight: 500;
+}
+
+.team-title .text-features {
+    color: #FF900E;
+    font-weight: 700;
+}
+
+/* facts section css start */
+.facts-container{
+    display: flex;
+    justify-content: space-around;
+}
+.facts-container, .card{
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    text-align: center;
+    padding:40px 30px;
+}
+.facts-container .card-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 5px;
+}
+.facts-container .card-stats{
+    font-size: 2.8rem;
+    color: #424242;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*sponsors css start  */
+.sponsors{
+    text-align: center;
+}
+.sponsors-img-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+
+}
 
 /* responsive media quary */
 /* Mobile devices */
-@media screen and (max-width:576px){
-  .banner{
-    padding: 20px;
-  }    
-  nav{
-    flex-direction: column;
-  }
-}
-@media screen and(min-width:577px) and (max-width:960px) {
-    .banner{
+@media screen and (max-width:576px) {
+    .banner {
         padding: 20px;
-      } 
-      nav{
+    }
+    nav,
+    .team-container,
+    .facts-container,
+    .sponsors-img-container
+    {
         flex-direction: column;
-      }   
+    }
+
+    .team-img-container {
+        grid-template-columns: 1fr;
+    }
+
+    .team-content ,.facts-container{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .facts-container{
+        gap: 10px;
+    }
+
+    
+
+}
+
+/*tablet devise  */
+@media screen and(min-width:577px) and (max-width:960px) {
+    .banner {
+        padding: 20px;
+    }
+
+    nav,
+    .team-container,
+    .sponsors-img-container {
+        flex-direction: column;
+    }
 }
